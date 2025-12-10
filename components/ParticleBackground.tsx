@@ -21,7 +21,7 @@ function Particles() {
     return geom
   }, [])
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     if (ref.current) {
       ref.current.rotation.x -= delta / 10
       ref.current.rotation.y -= delta / 15
@@ -44,7 +44,7 @@ function Particles() {
 
 export default function ParticleBackground() {
   return (
-    <div className="absolute inset-0 w-full h-full opacity-30 dark:opacity-20">
+    <div className="absolute inset-0 w-full h-full opacity-30 dark:opacity-20 pointer-events-none">
       <Canvas camera={{ position: [0, 0, 5] }}>
         <Particles />
       </Canvas>
