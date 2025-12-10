@@ -10,37 +10,37 @@ permissions:
   id-token: write
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
 
     steps:
+      # 1. Checkout repo
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      # 2. Setup PNPM
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
         with:
-          node-version: 20
+          version: 8
 
+      # 3. Install dependencies
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
-      - name: Build Next.js static site
-        run: npm run build
+      # 4. Build Next.js static site
+      - name: Build site
+        run: pnpm build
 
-      - name: Upload build output
+      # 5. Upload the out/ folder
+      - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
+      # 6. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
