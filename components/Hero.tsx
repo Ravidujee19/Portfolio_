@@ -141,23 +141,6 @@ export default function Hero() {
               </motion.a>
             ))}
           </motion.div>
-          
-          {/* Scroll Indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, repeat: Infinity, repeatType: 'reverse', duration: 1.5 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          >
-            <motion.button
-              onClick={() => scrollToSection('#about')}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400"
-            >
-              <FiArrowDown size={32} />
-            </motion.button>
-          </motion.div>
         </motion.div>
       </div>
     </section>
