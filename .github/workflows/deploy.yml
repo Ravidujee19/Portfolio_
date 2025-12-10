@@ -16,20 +16,25 @@ jobs:
       name: github-pages
 
     steps:
+      # 1. Checkout repo
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # 2. Setup PNPM
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
           version: 8
 
+      # 3. Install dependencies
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build static site
+      # 4. Build static site
+      - name: Build site
         run: pnpm build
 
+      # 5. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

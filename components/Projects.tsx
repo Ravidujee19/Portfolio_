@@ -20,67 +20,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    id: 1,
-    title: 'Multi-Agent AI System',
-    description: 'An intelligent multi-agent system using advanced AI techniques for collaborative problem-solving and decision-making.',
-    category: 'ml',
-    tech: ['Python', 'TensorFlow', 'PyTorch', 'OpenAI', 'LangChain'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    image: 'https://via.placeholder.com/600x400?text=Multi-Agent+AI',
-  },
-  {
-    id: 2,
-    title: 'Predictive ML Pipeline',
-    description: 'End-to-end machine learning pipeline for predictive analytics with automated feature engineering and model selection.',
-    category: 'ml',
-    tech: ['Python', 'Scikit-learn', 'Pandas', 'XGBoost', 'MLflow'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    image: 'https://via.placeholder.com/600x400?text=ML+Pipeline',
-  },
-  {
-    id: 3,
-    title: 'Interactive Data Dashboard',
-    description: 'Real-time interactive dashboard built with Streamlit for data visualization and exploratory data analysis.',
-    category: 'visualization',
-    tech: ['Python', 'Streamlit', 'Plotly', 'Pandas', 'NumPy'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    image: 'https://via.placeholder.com/600x400?text=Data+Dashboard',
-  },
-  {
-    id: 4,
-    title: 'Business Intelligence Dashboard',
-    description: 'Comprehensive Power BI dashboard with advanced analytics, KPIs, and interactive visualizations for business insights.',
-    category: 'visualization',
-    tech: ['Power BI', 'SQL', 'DAX', 'Power Query'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    image: 'https://via.placeholder.com/600x400?text=BI+Dashboard',
-  },
-  {
-    id: 5,
-    title: 'Deep Learning Model',
-    description: 'Neural network architecture for image classification using convolutional neural networks and transfer learning.',
-    category: 'ml',
-    tech: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'NumPy'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    image: 'https://via.placeholder.com/600x400?text=Deep+Learning',
-  },
-  {
-    id: 6,
-    title: 'Exploratory Data Analysis',
-    description: 'Comprehensive EDA project analyzing complex datasets with statistical insights and data visualization.',
-    category: 'analytics',
-    tech: ['Python', 'Pandas', 'Matplotlib', 'Seaborn', 'Jupyter'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    image: 'https://via.placeholder.com/600x400?text=EDA+Project',
-  },
-  {
-  id: 7,
+  id: 1,
   title: "BookManager",
   description:
     "A full-stack CRUD application for managing books using Spring Boot, Hibernate (JPA), Thymeleaf, and an H2 in-memory database. Includes add, edit, delete, view, and title-based search with a clean Bootstrap UI.",
@@ -96,10 +36,10 @@ const projects: Project[] = [
   ],
   github: "https://github.com/Ravidujee19/BookManager",
   demo: "",
-  image: "/projects/bookmanager/cover.png"
+  image: ""
   },
   {
-  id: 8,
+  id: 2,
   title: "CityBus",
   description:
     "A PHP and MySQL-based CRUD system for managing buses, routes, schedules, reservations, and user roles. Supports Admin, User, and Driver accounts with role-based access. Includes modules for bus management, route handling, reservations, and driver scheduling.",
@@ -113,20 +53,10 @@ const projects: Project[] = [
   ],
   github: "https://github.com/Dilmith-Ranasinghe518/CityBus", 
   demo: "",
-  image: "/projects/busmanager/cover.png"
+  image: ""
   },
   {
-    id: 9,
-    title: 'Social Media Mobile App',
-    description: 'Cross-platform mobile application with real-time messaging, photo sharing, and social networking features.',
-    category: 'mobile',
-    tech: ['React Native', 'Firebase', 'Redux', 'Expo', 'Node.js'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    image: 'https://via.placeholder.com/600x400?text=Social+Media+App',
-  },
-  {
-  id: 10,
+  id: 3,
   title: "Scholarship Exam Prediction",
   description:
     "A machine learning model that predicts whether a 4th-grade student will pass the 5th-grade scholarship exam using a dataset of 30 students. Includes EDA, preprocessing, model training, evaluation, and achieved 93% accuracy.",
@@ -142,10 +72,10 @@ const projects: Project[] = [
   ],
   github: "https://github.com/Ravidujee19/Scholarship_prediction",
   demo: "",
-  image: "/projects/scholarship/main.png"
+  image: ""
   },
   {
-  id: 11,
+  id: 4,
   title: "PocketGuard",
   description:
     "PocketGuard is an offline-first personal finance tracker built with Kotlin. It allows users to manage income, expenses, budgets, category-wise summaries, and secure passcode access. All data is stored locally using SharedPreferences with optional manual backup/restore.",
@@ -156,7 +86,7 @@ const projects: Project[] = [
   image: "/Project/pocketguard.png" 
   },
   {
-  id: 12,
+  id: 5,
   title: "MediHeaven",
   description:
     "A full-stack MERN platform for managing personal health data, doctor appointments, finances, and a healthcare marketplace. Supports multiple roles (Admin, Patient, Supplier, Health Provider), real-time data visualizations, MVC architecture, and secure JWT authentication.",
@@ -173,10 +103,10 @@ const projects: Project[] = [
   ],
   github: "https://github.com/Ravidujee19/MediHeaven",
   demo: "",
-  image: "/projects/mediheaven/cover.png"
+  image: ""
   },
   {
-  id: 13,
+  id: 6,
   title: "EventPro",
   description:
     "A Java-based event reservation system built with Servlets, JSP, and MySQL. Users can register, log in, browse events, and reserve slots, while admins manage events, reservations, and user accounts. Follows a clean MVC architecture with JDBC for database operations.",
@@ -191,9 +121,9 @@ const projects: Project[] = [
     "JavaScript",
     "MVC Architecture"
   ],
-  github: "https://github.com/your-username/EventPro", // replace with your actual repo
+  github: "https://github.com/Ravidujee19/EventPro", 
   demo: "",
-  image: "/projects/eventpro/cover.png"
+  image: ""
   },
 
 
