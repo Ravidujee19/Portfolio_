@@ -16,31 +16,23 @@ jobs:
       name: github-pages
 
     steps:
-      # 1. Checkout repo
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. Setup PNPM
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
           version: 8
 
-      # 3. Install dependencies
       - name: Install dependencies
         run: pnpm install
 
-      # 4. Build Next.js static site
-      - name: Build site
+      - name: Build static site
         run: pnpm build
 
-      # 5. Upload the out/ folder
-      - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./out
-
-      # 6. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: gh-pages
