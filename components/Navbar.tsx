@@ -64,7 +64,7 @@ export default function Navbar() {
                 onClick={() => scrollToSection(item.href)}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors font-medium"
+                className="text-gray-700 dark:text-gray-300 hover-color font-medium"
               >
                 {item.name}
               </motion.button>
@@ -73,7 +73,7 @@ export default function Navbar() {
               onClick={toggleTheme}
               whileHover={{ rotate: 180, scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+              className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover-color"
             >
               {theme === 'dark' ? <FiSun size={20} /> : <FiMoon size={20} />}
             </motion.button>
