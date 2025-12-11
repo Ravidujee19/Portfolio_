@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ------------------------------
-   BASE THEME VALUES
------------------------------- */
 @layer base {
   :root {
     --primary: #3b82f6; /* Light blue */
@@ -27,13 +24,7 @@
   }
 }
 
-/* ------------------------------
-   UTILITIES
------------------------------- */
 @layer utilities {
-  /* ================================
-     1. Gradient Text (auto theme)
-  =================================*/
   .text-gradient {
     background: linear-gradient(
       to right,
@@ -44,9 +35,6 @@
     color: transparent;
   }
 
-  /* ================================
-     2. Universal Hover Text Color
-  =================================*/
   .hover-color {
     transition: color 0.25s ease-in-out;
   }
@@ -54,26 +42,16 @@
     color: var(--primary) !important;
   }
 
-  /* ================================
-     3. Universal Border Hover
-  =================================*/
   .hover-border {
     transition: border-color 0.25s ease-in-out;
   }
   .hover-border:hover {
     border-color: var(--primary) !important;
   }
-
-  /* ================================
-     4. Dot / Bullet Accent
-  =================================*/
   .dot-color {
     background-color: var(--primary);
   }
 
-  /* ================================
-     5. Themed Button
-  =================================*/
   .btn-theme {
     @apply transition-all duration-300;
     border-color: var(--border-primary);
@@ -83,9 +61,6 @@
     border-color: var(--primary-hover) !important;
   }
 
-  /* ================================
-     6. Glow Effect (Hero, Cards, Navbar)
-  =================================*/
   .glow-effect {
     position: relative;
   }
@@ -103,10 +78,6 @@
   .glow-effect:hover::before {
     @apply opacity-100;
   }
-
-  /* ================================
-     7. Background Accent (optional)
-  =================================*/
   .bg-theme {
     background-color: var(--primary);
   }
@@ -114,17 +85,9 @@
   .bg-theme-hover:hover {
     background-color: var(--primary-hover);
   }
-
-  /* ================================
-     8. Border Accent
-  =================================*/
   .border-theme {
     border-color: var(--border-primary);
   }
-
-  /* ================================
-     9. Icon Hover (Footer / Navbar)
-  =================================*/
   .icon-hover {
     transition: color 0.3s ease-in-out;
   }
