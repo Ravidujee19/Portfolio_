@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FiGithub, FiLinkedin, FiMail, FiArrowUp } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiMail, FiArrowUp, FiInstagram } from 'react-icons/fi'
 
 const quickLinks = [
   { name: 'Home', href: '#home' },
@@ -12,10 +12,12 @@ const quickLinks = [
 ]
 
 const socialLinks = [
-  { icon: FiGithub, href: 'https://github.com', label: 'GitHub' },
-  { icon: FiLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: FiMail, href: 'mailto:your.email@example.com', label: 'Email' },
+  { icon: FiGithub, href: 'https://github.com/Ravidujee19', label: 'GitHub' },
+  { icon: FiLinkedin, href: 'https://linkedin.com/in/ravidu-wickramaarachchi', label: 'LinkedIn' },
+  { icon: FiMail, href: 'mailto:ravijeewantha6599745@gmail.com', label: 'Email' },
+  { icon: FiInstagram, href: 'https://instagram.com/ravidujee_', label: 'Instagram' },
 ]
+
 
 export default function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })

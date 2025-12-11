@@ -3,6 +3,7 @@
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 import { FiCode, FiLayers, FiUsers, FiAward } from 'react-icons/fi'
+import Image from "next/image";
 
 const stats = [
   { icon: FiCode, value: '10+', label: 'Projects', color: 'text-blue-500' },
@@ -63,7 +64,7 @@ export default function About() {
                 {...({} as any)}
               >
                 <img
-                  src="/Profile/profile.jpg"
+                  src="/Portfolio_/Profile/profile.jpg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />

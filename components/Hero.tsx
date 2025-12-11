@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { FiArrowDown, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
+import { FiInstagram, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
 import ParticleBackground from './ParticleBackground'
 
 const typingTexts = [
@@ -51,10 +51,10 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <ParticleBackground />
-      
+
       {/* Animated Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 dark:from-blue-900/30 dark:via-purple-900/30 dark:to-pink-900/30 animate-gradient" />
-      
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -69,7 +69,7 @@ export default function Hero() {
           >
             <span className="text-gradient">Hi, I'm Ravidu Wickramaarachchi</span>
           </motion.h1>
-          
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -80,7 +80,7 @@ export default function Hero() {
             <span className="text-gradient">{displayText}</span>
             <span className="animate-pulse">|</span>
           </motion.div>
-          
+
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -90,7 +90,7 @@ export default function Hero() {
             Turning complex datasets into actionable insights and building intelligent systems
             that solve real-world problems.
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ export default function Hero() {
             >
               View My Work
             </motion.button>
-            
+
             <motion.button
               onClick={() => scrollToSection('#contact')}
               whileHover={{ scale: 1.05 }}
@@ -115,7 +115,7 @@ export default function Hero() {
               Get In Touch
             </motion.button>
           </motion.div>
-          
+
           {/* Social Icons */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -124,10 +124,11 @@ export default function Hero() {
             className="flex justify-center gap-6 mb-12"
           >
             {[
-              { icon: FiGithub, href: 'https://github.com', color: 'hover:text-gray-900 dark:hover:text-white' },
-              { icon: FiLinkedin, href: 'https://linkedin.com', color: 'hover:text-blue-600' },
-              { icon: FiMail, href: 'mailto:your.email@example.com', color: 'hover:text-red-500' },
-            ].map(({ icon: Icon, href, color }) => (
+              { icon: FiGithub, href: 'https://github.com/Ravidujee19' },
+              { icon: FiLinkedin, href: 'https://linkedin.com/in/ravidu-wickramaarachchi' },
+              { icon: FiMail, href: 'mailto:ravijeewantha6599745@gmail.com' },
+              { icon: FiInstagram, href: 'https://instagram.com/ravidujee_' },
+            ].map(({ icon: Icon, href }) => (
               <motion.a
                 key={href}
                 href={href}
@@ -135,15 +136,20 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
-                className={`text-2xl text-gray-600 dark:text-gray-400 ${color} transition-colors`}
+                className="text-2xl transition-colors"
+                style={{
+                  color: 'var(--icon-color)',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--icon-hover)')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--icon-color)')}
               >
                 <Icon />
               </motion.a>
             ))}
           </motion.div>
+
         </motion.div>
       </div>
     </section>
   )
 }
-

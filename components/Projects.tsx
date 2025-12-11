@@ -83,7 +83,7 @@ const projects: Project[] = [
   tech: ["Kotlin", "Android", "XML", "SharedPreferences"],
   github: "https://github.com/Ravidujee19/PocketGuard",
   demo: "",
-  image: "/Project/pocketguard.png" 
+  image: "/Portfolio_/Project/pocketguard.png" 
   },
   {
   id: 5,
