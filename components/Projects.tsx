@@ -20,6 +20,45 @@ interface Project {
 
 const projects: Project[] = [
   {
+  id: 9,
+  title: "Disease Risk Predictor",
+  description:
+    "A machine learning–based disease risk prediction system built using Python, Scikit-learn, and Streamlit. Includes full data science pipeline with preprocessing, EDA, feature engineering, model training, and an interactive Streamlit application for real-time predictions.",
+  category: "ml",
+  tech: [
+    "Python",
+    "Scikit-learn",
+    "Pandas",
+    "NumPy",
+    "Streamlit",
+    "Jupyter",
+    "Machine Learning"
+  ],
+  github: "https://github.com/Ravidujee19/disease-risk",
+  demo: "https://l1nq.com/0RGYr",
+  image: "/Portfolio_/Project/image9.png"
+  },
+  {
+  id: 10,
+  title: "Uber Ride Cancellation Predictor",
+  description:
+    "A leakage-aware machine learning system that predicts the probability of an Uber ride cancellation using only pre-booking features. Includes preprocessing pipelines, multi-model training (Logistic Regression, Random Forest, Gradient Boosting, XGBoost/LightGBM optional), soft-voting and stacking ensembles, automated model selection, a Streamlit demo, and a CLI for batch/single predictions.",
+  category: "ml",
+  tech: [
+    "Python",
+    "Scikit-learn",
+    "Streamlit",
+    "XGBoost",
+    "LightGBM",
+    "Ensemble Learning",
+    "Pandas",
+    "NumPy"
+  ],
+  github: "https://github.com/Ravidujee19/uber-ride-cancel-predictor",
+  demo: "",
+  image: "/Portfolio_/Project/image10.png"
+  },
+  {
   id: 1,
   title: "BookManager",
   description:
@@ -36,13 +75,13 @@ const projects: Project[] = [
   ],
   github: "https://github.com/Ravidujee19/BookManager",
   demo: "",
-  image: ""
+  image: "/Portfolio_/Project/image1.png"
   },
   {
   id: 2,
   title: "CityBus",
   description:
-    "A PHP and MySQL-based CRUD system for managing buses, routes, schedules, reservations, and user roles. Supports Admin, User, and Driver accounts with role-based access. Includes modules for bus management, route handling, reservations, and driver scheduling.",
+    "A PHP and MySQL-based CRUD system for managing buses, routes, schedules, reservations, and user roles. Supports Admin, User, and Driver accounts. Includes modules for bus management, route handling, reservations, and driver scheduling.",
   category: "web",
   tech: [
     "PHP",
@@ -53,7 +92,7 @@ const projects: Project[] = [
   ],
   github: "https://github.com/Dilmith-Ranasinghe518/CityBus", 
   demo: "",
-  image: ""
+  image: "/Portfolio_/Project/image2.png"
   },
   {
   id: 3,
@@ -72,7 +111,7 @@ const projects: Project[] = [
   ],
   github: "https://github.com/Ravidujee19/Scholarship_prediction",
   demo: "",
-  image: ""
+  image: "/Portfolio_/Project/image3.png"
   },
   {
   id: 4,
@@ -83,7 +122,7 @@ const projects: Project[] = [
   tech: ["Kotlin", "Android", "XML", "SharedPreferences"],
   github: "https://github.com/Ravidujee19/PocketGuard",
   demo: "",
-  image: "/Portfolio_/Project/pocketguard.png" 
+  image: "/Portfolio_/Project/image4.png" 
   },
   {
   id: 5,
@@ -98,12 +137,11 @@ const projects: Project[] = [
     "Express.js",
     "MongoDB",
     "JWT",
-    "Chart.js",
     "Recharts"
   ],
   github: "https://github.com/Ravidujee19/MediHeaven",
   demo: "",
-  image: ""
+  image: "/Portfolio_/Project/image5.png"
   },
   {
   id: 6,
@@ -123,9 +161,83 @@ const projects: Project[] = [
   ],
   github: "https://github.com/Ravidujee19/EventPro", 
   demo: "",
-  image: ""
+  image: "/Portfolio_/Project/image6.png"
   },
-
+  {
+  id: 7,
+  title: "Loan Approval Simulator",
+  description:
+    "A multi-agent loan evaluation system built with FastAPI and React. Features an Applicant Evaluator agent that processes user data and documents, a Score Agent powered by ML models to predict approval outcomes, and a Recommendation Agent that generates data-driven improvement suggestions. Includes explainability (SHAP), fairness checks, and a full React dashboard UI.",
+  category: "ml",
+  tech: [
+    "FastAPI",
+    "React",
+    "Vite",
+    "Machine Learning",
+    "Python",
+    "SHAP",
+    "Responsible AI",
+    "REST APIs"
+  ],
+  github: "https://github.com/Ravidujee19/loan-approval-simulator",
+  demo: "",
+  image: "/Portfolio_/Project/image7.png"
+  },
+  {
+  id: 8,
+  title: "Diabetes Dataset Preprocessing",
+  description:
+    "A complete data preprocessing pipeline for the Pima Indians Diabetes dataset, including missing value handling, outlier removal, binning of Age and Glucose, and Min-Max scaling. The project prepares a clean and feature-engineered dataset ready for downstream machine learning tasks, implemented entirely in a Jupyter Notebook.",
+  category: "analytics",
+  tech: [
+    "Python",
+    "Pandas",
+    "NumPy",
+    "Scikit-learn",
+    "Jupyter Notebook",
+    "Data Preprocessing",
+    "Feature Engineering"
+  ],
+  github: "https://github.com/Ravidujee19/diabetes_data_preprocessing",
+  demo: "",
+  image: "/Portfolio_/Project/image8.png"
+  },
+  {
+  id: 11,
+  title: "Netflix EDA",
+  description:
+    "An exploratory data analysis project on the Netflix Titles dataset from Kaggle. The analysis uncovers trends in content type distribution, country-wise production, release year patterns, and duration insights using Python visualizations.",
+  category: "analytics",
+  tech: [
+    "Python",
+    "Pandas",
+    "Seaborn",
+    "Matplotlib",
+    "Google Colab",
+    "EDA",
+    "Data Visualization"
+  ],
+  github: "https://github.com/Ravidujee19/Netflix-EDA",
+  demo: "",
+  image: "/Portfolio_/Project/image11.png"
+},
+{
+  id: 12,
+  title: "Typing Game",
+  description:
+    "A fun and interactive typing speed test game built using TypeScript, HTML, and CSS. Features a countdown timer with sound effects, real-time typing validation, random word generation, and score tracking. Fully modular with clean project structure and TypeScript-based logic.",
+  category: "web",
+  tech: [
+    "TypeScript",
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Node.js"
+  ],
+  github: "https://github.com/Ravidujee19/TypingGame",
+  demo: "",
+  image: "/Portfolio_/Project/image12.png"
+}
 
 
 ]
