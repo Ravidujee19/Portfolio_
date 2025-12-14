@@ -25,7 +25,7 @@ pnpm install
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
+Open [http://localhost:3000/Portfolio_](http://localhost:3000/Portfolio_) to view the portfolio.
 
 ### Build
 
