@@ -7,7 +7,7 @@ const quickLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Skills', href: '#skills' },
+  // { name: 'Skills', href: '#skills' },
   { name: 'Contact', href: '#contact' },
 ]
 
@@ -25,9 +25,8 @@ export default function Footer() {
     const el = document.querySelector(href)
     if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
-
   return (
-    <footer className="relative bg-gradient-to-b from-gray-50 via-gray-100 to-white dark:from-gray-900 dark:via-gray-900 dark:to-black text-gray-900 dark:text-white overflow-hidden border-t border-gray-200 dark:border-gray-800">
+    <footer className="relative bg-gradient-to-b from-gray-50 via-gray-100 to-white dark:from-gray-800 dark:via-gray-900 dark:to-black text-gray-900 dark:text-white overflow-hidden border-t border-gray-200 dark:border-gray-800">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
 

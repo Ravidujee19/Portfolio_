@@ -346,7 +346,8 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800"
+      // className="py-20 md:py-32 bg-gray-50 dark:bg-gray-800"
+      className="py-20 md:py-32 bg-white dark:bg-gray-900"
     >
       <Toaster position="top-right" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
