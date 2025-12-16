@@ -237,9 +237,24 @@ const projects: Project[] = [
   github: "https://github.com/Ravidujee19/TypingGame",
   demo: "",
   image: "/Portfolio_/Project/image12.png"
+},
+{
+  id: 13,
+  title: "Real Estate Analytics Dashboard",
+  description:
+    "An interactive real estate analytics dashboard built using Microsoft Power BI. Delivers insights into property pricing, market trends, listing status, and agent performance through KPI cards, city-wise price trends, monthly analysis, and interactive slicers powered by DAX and Power Query.",
+  category: "visualization",
+  tech: [
+    "Microsoft Power BI",
+    "Power Query",
+    "DAX",
+    "Data Visualization",
+    "Business Intelligence"
+  ],
+  github: "https://github.com/Ravidujee19/Real-Estate-Dashboard",
+  demo: "",
+  image: "/Portfolio_/Project/image13.png"
 }
-
-
 ]
 
 const categories: { value: ProjectCategory; label: string }[] = [
