@@ -254,6 +254,103 @@ const projects: Project[] = [
   github: "https://github.com/Ravidujee19/Real-Estate-Dashboard",
   demo: "",
   image: "/Portfolio_/Project/image13.png"
+},
+{
+  id: 14,
+  title: "LuxeWear",
+  description:
+    "A modern fashion e-commerce frontend simulating an online clothing store experience. Includes authentication UI, product browsing, cart checkout, delivery details, returns & policies, and an admin dashboard layout, complete with JavaScript toast notifications and modal systems.",
+  category: "web",
+  tech: [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Responsive Design",
+    "Custom UI Components"
+  ],
+  github: "https://github.com/Ravidujee19/LuxeWear",
+  demo: "",
+  image: "/Portfolio_/Project/image14.png"
+},
+{
+  id: 15,
+  title: "Smart Campus Operations Hub",
+  description:
+    "An integrated campus operations hub designed to streamline resource allocation, booking requests, and maintenance ticketing. Features real-time notifications over WebSockets (STOMP/SockJS), secure role-based access control with Google OAuth2, PostgreSQL storage, and robust backend integration test suites.",
+  category: "web",
+  tech: [
+    "Spring Boot",
+    "React",
+    "PostgreSQL",
+    "Spring Security",
+    "OAuth2",
+    "WebSockets",
+    "SockJS",
+    "Hibernate",
+    "JUnit 5",
+    "Vite"
+  ],
+  github: "https://github.com/Ravidujee19/it3030-paf-2026-smart-campus-groupY3S2-WE-152",
+  demo: "",
+  image: "/Portfolio_/Project/image15.png"
+},
+{
+  id: 16,
+  title: "Coach Impact Analytics",
+  description:
+    "A data analytics project evaluating how coaching support (encouragement, feedback, respect, goal-setting) influences athlete confidence and performance. Implements data preprocessing, descriptive, inferential, and predictive ML models in Jupyter Notebooks.",
+  category: "analytics",
+  tech: [
+    "Python",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Seaborn",
+    "Scikit-learn",
+    "SciPy",
+    "Jupyter Notebook",
+    "Data Analytics"
+  ],
+  github: "https://github.com/Ravidujee19/coach-impact-analytics",
+  demo: "",
+  image: "/Portfolio_/Project/image16.png"
+},
+{
+  id: 17,
+  title: "FloraScan",
+  description:
+    "An AI-powered mobile app designed to detect plant diseases from images. Features a custom TensorFlow Lite classification model deployed via a lightweight FastAPI backend, a dynamic Flutter mobile client, and MongoDB cloud historical analytics for tracking crop lifespan metrics.",
+  category: "mobile",
+  tech: [
+    "Flutter",
+    "Dart",
+    "FastAPI",
+    "Python",
+    "TensorFlow Lite",
+    "MongoDB",
+    "python-dotenv"
+  ],
+  github: "https://github.com/Ravidujee19/FloraScan",
+  demo: "",
+  image: "/Portfolio_/Project/image17.png"
+},
+{
+  id: 18,
+  title: "Squad Tracker",
+  description:
+    "A squad management and attendance tracking system for sports teams. Synchronizes with a private Google Sheets backend using a serverless Google Apps Script API. Displays automated dashboard statistics, attendance trend patterns, poll accuracy ratings, and active streaks.",
+  category: "web",
+  tech: [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Google Apps Script",
+    "Google Sheets API",
+    "Serverless"
+  ],
+  github: "https://github.com/Ravidujee19/Squad-tracker",
+  demo: "https://Ravidujee19.github.io/Squad-tracker/",
+  image: "/Portfolio_/Project/image18.png"
 }
 ]
 

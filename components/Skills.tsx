@@ -185,7 +185,7 @@ export default function Skills() {
           className="mt-20 grid md:grid-cols-3 gap-6"
         >
           {[
-            { label: "Total Projects", value: "10+" },
+            { label: "Total Projects", value: "18" },
             { label: "Technologies", value: "15+" },
             { label: "Years Experience", value: "2+" },
           ].map((stat, index) => (
