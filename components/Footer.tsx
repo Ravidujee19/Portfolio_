@@ -124,18 +124,27 @@ export default function Footer() {
               </span>. All rights reserved.
             </p>
 
-            {/* Back to top */}
-            <motion.button
-              onClick={scrollToTop}
-              whileHover={{ scale: 1.1, y: -3 }}
-              whileTap={{ scale: 0.95 }}
-              className="group flex items-center gap-2 px-4 py-2 bg-white/80 dark:bg-gray-800/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 hover-border hover-color transition-all text-sm backdrop-blur-sm shadow-sm dark:shadow-none"
-            >
-              <span>Back to top</span>
-              <motion.div animate={{ y: [0, -3, 0] }} transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}>
-                <FiArrowUp size={16} />
-              </motion.div>
-            </motion.button>
+            <div className="flex items-center gap-4">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img 
+                src="https://komarev.com/ghpvc/?username=ravidujee19-portfolio&label=Site%20Views&color=blue&style=flat" 
+                alt="Site Views" 
+                className="h-6 opacity-80 hover:opacity-100 transition-opacity"
+              />
+
+              {/* Back to top */}
+              <motion.button
+                onClick={scrollToTop}
+                whileHover={{ scale: 1.1, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+                className="group flex items-center gap-2 px-4 py-2 bg-white/80 dark:bg-gray-800/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 hover-border hover-color transition-all text-sm backdrop-blur-sm shadow-sm dark:shadow-none"
+              >
+                <span>Back to top</span>
+                <motion.div animate={{ y: [0, -3, 0] }} transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}>
+                  <FiArrowUp size={16} />
+                </motion.div>
+              </motion.button>
+            </div>
           </div>
         </motion.div>
 
