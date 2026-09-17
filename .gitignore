@@ -3,3 +3,7 @@ node_modules/
 dist/
 .DS_Store
 out/
+
+# Local-only tracking files
+CHANGELOG.md
+task.md
