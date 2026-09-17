@@ -470,6 +470,7 @@ export default function Projects() {
                         <FiExternalLink size={20} />
                       </motion.a>
                     )}
+
                   </div>
                 </div>
 
