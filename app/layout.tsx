@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   authors: [{ name: 'Ravidu Wickramaarachchi' }],
 
   icons: {
-    icon: '/Portfolio_/Profile/profile.jpg',
-    apple: '/Portfolio_/Profile/profile.jpg',
+    icon: '/Portfolio_/Profile/profile.jpeg',
+    apple: '/Portfolio_/Profile/profile.jpeg',
   },
 
   openGraph: {

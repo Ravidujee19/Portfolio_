@@ -64,7 +64,7 @@ export default function About() {
                 {...({} as any)}
               >
                 <img
-                  src="/Portfolio_/Profile/profile.jpg"
+                  src="/Portfolio_/Profile/profile.jpeg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
