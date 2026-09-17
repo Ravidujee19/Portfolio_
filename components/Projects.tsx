@@ -457,16 +457,19 @@ export default function Projects() {
                     >
                       <FiGithub size={20} />
                     </motion.a>
-                    <motion.a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1, rotate: -5 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="p-3 bg-white rounded-full text-gray-900 hover:bg-gray-100"
-                    >
-                      <FiExternalLink size={20} />
-                    </motion.a>
+                    {project.demo && (
+                      <motion.a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.1, rotate: -5 }}
+                        whileTap={{ scale: 0.9 }}
+                        className="p-3 bg-white rounded-full text-gray-900 hover:bg-gray-100"
+                        aria-label={`View live demo of ${project.title}`}
+                      >
+                        <FiExternalLink size={20} />
+                      </motion.a>
+                    )}
                   </div>
                 </div>
 
