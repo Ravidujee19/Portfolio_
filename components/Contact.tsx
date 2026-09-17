@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 // 'use client'
 
 // import { useState } from 'react'
@@ -228,6 +229,8 @@
 //   )
 // }
 
+=======
+>>>>>>> Stashed changes
 "use client";
 
 import { useState } from "react";
@@ -335,7 +338,11 @@ export default function Contact() {
   const socialLinks = [
     { icon: FiGithub, href: "https://github.com/Ravidujee19", label: "GitHub" },
     { icon: FiLinkedin, href: "https://linkedin.com/in/ravidu-wickramaarachchi", label: "LinkedIn" },
+<<<<<<< Updated upstream
     { icon: FiMail, href: "mailto:ravijeewantha6599745@gmail.com", label: "Email" },
+=======
+    { icon: FiMail, href: "mailto:raviduwickramaarachchi@gmail.com", label: "Email" },
+>>>>>>> Stashed changes
     { icon: FiInstagram, href: "https://instagram.com/ravidujee_", label: "Instagram" },
   ];
 
