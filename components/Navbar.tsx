@@ -16,6 +16,7 @@ const navItems = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('home')
   const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
@@ -24,6 +25,35 @@ export default function Navbar() {
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // Track active section via IntersectionObserver
+  useEffect(() => {
+    const sectionIds = navItems.map((item) => item.href.replace('#', ''))
+
+    const observers: IntersectionObserver[] = []
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id)
+      if (!el) return
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActiveSection(id)
+          }
+        },
+        {
+          rootMargin: '-40% 0px -55% 0px',
+          threshold: 0,
+        }
+      )
+
+      observer.observe(el)
+      observers.push(observer)
+    })
+
+    return () => observers.forEach((obs) => obs.disconnect())
   }, [])
 
   const scrollToSection = (href: string) => {
@@ -58,21 +88,40 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <motion.button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className="text-gray-700 dark:text-gray-300 hover-color font-medium"
-              >
-                {item.name}
-              </motion.button>
-            ))}
+            {navItems.map((item) => {
+              const isActive = activeSection === item.href.replace('#', '')
+              return (
+                <motion.button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  aria-label={`Navigate to ${item.name}`}
+                  className={`relative font-medium transition-colors duration-200 ${
+                    isActive
+                      ? 'text-gradient'
+                      : 'text-gray-700 dark:text-gray-300 hover-color'
+                  }`}
+                >
+                  {item.name}
+                  {isActive && (
+                    <motion.span
+                      layoutId="nav-underline"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full"
+                      style={{
+                        background: 'linear-gradient(to right, var(--primary), var(--primary-hover))',
+                      }}
+                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                </motion.button>
+              )
+            })}
             <motion.button
               onClick={toggleTheme}
               whileHover={{ rotate: 180, scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              aria-label="Toggle colour theme"
               className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover-color"
             >
               {theme === 'dark' ? <FiSun size={20} /> : <FiMoon size={20} />}
@@ -84,6 +133,7 @@ export default function Navbar() {
             <motion.button
               onClick={toggleTheme}
               whileTap={{ scale: 0.9 }}
+              aria-label="Toggle colour theme"
               className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
             >
               {theme === 'dark' ? <FiSun size={20} /> : <FiMoon size={20} />}
@@ -91,6 +141,7 @@ export default function Navbar() {
             <motion.button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               whileTap={{ scale: 0.9 }}
+              aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
               className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
             >
               {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -108,17 +159,30 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg"
           >
-            <div className="px-4 py-4 space-y-4">
-              {navItems.map((item) => (
-                <motion.button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  whileHover={{ x: 10 }}
-                  className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors font-medium py-2"
-                >
-                  {item.name}
-                </motion.button>
-              ))}
+            <div className="px-4 py-4 space-y-2">
+              {navItems.map((item) => {
+                const isActive = activeSection === item.href.replace('#', '')
+                return (
+                  <motion.button
+                    key={item.name}
+                    onClick={() => scrollToSection(item.href)}
+                    whileHover={{ x: 10 }}
+                    aria-label={`Navigate to ${item.name}`}
+                    className={`flex items-center gap-3 w-full text-left font-medium py-2 transition-colors ${
+                      isActive
+                        ? 'text-gradient'
+                        : 'text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400'
+                    }`}
+                  >
+                    <span
+                      className={`w-1.5 h-1.5 rounded-full flex-shrink-0 transition-all duration-300 ${
+                        isActive ? 'dot-color scale-125' : 'bg-gray-400 dark:bg-gray-600'
+                      }`}
+                    />
+                    {item.name}
+                  </motion.button>
+                )
+              })}
             </div>
           </motion.div>
         )}
@@ -126,4 +190,3 @@ export default function Navbar() {
     </motion.nav>
   )
 }
-
